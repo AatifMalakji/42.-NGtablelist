@@ -417,7 +417,11 @@
              <tbody>
                  <tr *ngFor="let o of orders">
                      <td>{{o.orderId}}</td>
-                     <td *ngFor="let p of products"><strong>Name:</strong> {{p.name}}, <strong>QTY:</strong> {{p.name}}</td>
+                     <td>
+                        <div *ngFor="let p of o.products">
+                            <strong>Name:</strong> {{p.name}}, <strong>QTY:</strong> {{p.qty}}
+                          </div>
+                     </td>
                  </tr>
              </tbody>
             </table>
